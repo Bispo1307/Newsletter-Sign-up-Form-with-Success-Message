@@ -17,7 +17,7 @@ form.addEventListener("submit", (event) => {
     mainModal.classList.add("remove");
     thanksModal.classList.add("show");
     emailProvided.textContent = valueEmail;
-    textConfirmation.innerHTML = `A confirmation email has been sent to <strong>${valueEmail}</strong>. Please open it and click the button inside to confirm your subscription.`;
+    textConfirmation.innerHTML = `Um e-mail de confirmação foi enviado para <strong>${valueEmail}</strong>. Abra-o e clique no botão para confirmar sua inscrição.`;
   }
 });
 

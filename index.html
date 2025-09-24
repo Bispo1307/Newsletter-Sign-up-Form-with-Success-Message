@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter Sign-up Form with Success Message
+    </title>
+  </head>
+  <body>
+    <div class="main-modal">
+      <div class="hero">
+        <h1>Stay updated!</h1>
+        <p class="paragraph">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <div class="benefits">
+          <div class="benefit-1">
+            <img src="assets/images/icon-list.svg" alt="Icon List" />
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="benefit-2">
+            <img src="assets/images/icon-list.svg" alt="Icon List" />
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="benefit-3">
+            <img src="assets/images/icon-list.svg" alt="Icon List" />
+            <p>And much more!</p>
+          </div>
+        </div>
+        <form id="form">
+          <div class="form-control">
+            <div class="form-header">
+              <small>Email address</small>
+              <small class="msg-error">Valid email required</small>
+            </div>
+            <input
+              id="input-email"
+              type="email"
+              placeholder="email@company.com"
+            />
+            <button type="submit">Subscribe to monthly newsletter</button>
+          </div>
+        </form>
+      </div>
+      <div class="image">
+        <img
+          class="desktop"
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="Illustration Desktop"
+        />
+        <img
+          class="tablet"
+          src="assets/images/illustration-sign-up-tablet.svg"
+          alt="Illustration Tablet"
+        />
+        <img
+          class="mobile"
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt="Illustration Mobile"
+        />
+      </div>
+    </div>
+    <div class="thanks-modal">
+      <img src="assets/images/icon-success.svg" alt="Icon Success" />
+      <h2>Thanks for subscribing!</h2>
+      <p id="text-confirmation">
+        <strong id="email-provided"></strong>
+      </p>
+      <button id="btn-cancel" type="button">Dismiss message</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

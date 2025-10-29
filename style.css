@@ -10,10 +10,19 @@
 :root {
   --primary-red: hsl(4, 100%, 67%);
 
-  --neutral-blue-800: hsl(234, 29%, 20%);
-  --neutral-blue-700: hsl(235, 18%, 26%);
+  --text-color: hsl(234, 29%, 20%);
+  --body-bg: hsl(235, 18%, 26%);
   --neutral-grey: hsl(0, 0%, 58%);
-  --neutral-white: hsl(0, 0%, 100%);
+  --modal-bg: hsl(0, 0%, 100%);
+}
+
+body.dark-mode {
+  --primary-red: hsl(4, 100%, 67%);
+
+  --text-color: hsl(0, 0%, 100%);
+  --body-bg: hsl(235, 18%, 26%);
+  --neutral-grey: hsl(0, 0%, 58%);
+  --modal-bg: hsl(234, 29%, 20%);
 }
 
 body {
@@ -23,7 +32,7 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--neutral-blue-700);
+  background-color: var(--body-bg);
 }
 
 .main-modal {
@@ -31,7 +40,7 @@ body {
   max-width: 920px;
   height: auto;
   max-height: 590px;
-  background-color: var(--neutral-white);
+  background-color: var(--modal-bg);
   display: flex;
   justify-content: space-between;
   gap: 60px;
@@ -55,13 +64,13 @@ body {
   font-size: 48px;
   font-weight: 700;
   margin-top: 60px;
-  color: var(--neutral-blue-800);
+  color: var(--text-color);
 }
 
 .hero .paragraph {
   font-weight: 400;
   margin: 20px 0;
-  color: var(--neutral-blue-800);
+  color: var(--text-color);
 }
 
 .benefits {
@@ -90,7 +99,7 @@ body {
 .benefit-2 p,
 .benefit-3 p {
   font-weight: 400;
-  color: var(--neutral-blue-800);
+  color: var(--text-color);
   max-width: 350px;
 }
 
@@ -114,7 +123,7 @@ form {
 .form-header small {
   font-size: 12px;
   font-weight: 700;
-  color: var(--neutral-blue-800);
+  color: var(--text-color);
 }
 
 .form-control.error .msg-error {
@@ -134,7 +143,7 @@ form {
 }
 
 .form-control input:focus {
-  outline: 1px solid var(--neutral-blue-800);
+  outline: 1px solid var(--text-color);
 }
 
 .form-control.error input {
@@ -146,12 +155,16 @@ form {
   color: var(--primary-red);
 }
 
+body.dark-mode .form-control button:hover {
+  color: var(--text-color);
+}
+
 .form-control button {
   border: none;
   padding: 14px 16px;
   border-radius: 4px;
-  color: var(--neutral-white);
-  background-color: var(--neutral-blue-800);
+  color: var(--modal-bg);
+  background-color: var(--text-color);
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -185,7 +198,7 @@ form {
   padding: 50px;
   padding-top: 40px;
   border-radius: 30px;
-  background-color: var(--neutral-white);
+  background-color: var(--modal-bg);
   display: none;
 }
 
@@ -206,18 +219,22 @@ form {
   font-weight: 700;
   line-height: 54px;
   margin-bottom: 20px;
-  color: var(--neutral-blue-800);
+  color: var(--text-color);
 }
 
 .thanks-modal p {
   font-weight: 400;
   margin-bottom: 30px;
-  color: var(--neutral-blue-800);
+  color: var(--text-color);
 }
 
 .thanks-modal strong {
   font-weight: 700;
-  color: var(--neutral-blue-800);
+  color: var(--text-color);
+}
+
+body.dark-mode .thanks-modal button:hover {
+  color: var(--text-color);
 }
 
 .thanks-modal button {
@@ -225,8 +242,8 @@ form {
   border: none;
   padding: 14px 16px;
   border-radius: 4px;
-  color: var(--neutral-white);
-  background-color: var(--neutral-blue-800);
+  color: var(--modal-bg);
+  background-color: var(--text-color);
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -236,6 +253,34 @@ form {
 .thanks-modal button:hover {
   background: linear-gradient(90deg, #ff006f, #ff6257);
   box-shadow: 4px 8px 20px #ff6257;
+}
+
+@media (min-width: 820px) and (max-width: 890px) {
+  body {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    margin-top: 26px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 820px) {
+  body {
+    padding: 20px;
+  }
+
+  .main-modal {
+    gap: 30px;
+    padding: 20px;
+    padding-left: 30px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -330,12 +375,5 @@ form {
     border-radius: 8px;
     font-size: 16px;
     margin-top: auto;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 875px) {
-  .hero h1 {
-    font-size: 48px;
-    margin-top: 60px;
   }
 }

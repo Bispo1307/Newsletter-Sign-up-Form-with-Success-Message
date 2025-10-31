@@ -46,3 +46,10 @@ function dismissMessage() {
   thanksModal.classList.remove("show");
   form.reset();
 }
+
+const body = document.body;
+const switchTheme = document.querySelector(".switch-theme");
+
+switchTheme.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});

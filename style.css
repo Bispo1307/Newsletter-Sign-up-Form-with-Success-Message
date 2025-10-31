@@ -255,6 +255,72 @@ body.dark-mode .thanks-modal button:hover {
   box-shadow: 4px 8px 20px #ff6257;
 }
 
+.switch-theme {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: var(--modal-bg);
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.switch-theme .icon-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.switch-theme .icon-theme i {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.switch-theme .icon-theme .icon-moon {
+  display: none;
+}
+
+.switch-theme .toggle-theme {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  background-color: var(--neutral-grey);
+}
+
+.switch-theme .toggle-theme .ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: var(--modal-bg);
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: left 0.3s ease-out;
+}
+
+body.dark-mode .switch-theme .icon-theme .icon-sun {
+  display: none;
+}
+
+body.dark-mode .switch-theme .icon-theme .icon-moon {
+  display: block;
+}
+
+body.dark-mode .switch-theme .toggle-theme .ball {
+  left: calc(100% - 22px);
+}
+
 @media (min-width: 820px) and (max-width: 890px) {
   body {
     padding: 20px;
@@ -375,5 +441,11 @@ body.dark-mode .thanks-modal button:hover {
     border-radius: 8px;
     font-size: 16px;
     margin-top: auto;
+  }
+
+  .switch-theme {
+    top: 20px;
+    left: 20px;
+    right: auto;
   }
 }

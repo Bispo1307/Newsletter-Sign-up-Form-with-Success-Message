@@ -147,6 +147,7 @@ form {
 }
 
 .form-control.error input {
+  color: var(--text-color);
   background-color: hsla(4, 100%, 67%, 0.1);
   border: 1px solid var(--primary-red);
 }
